@@ -1,57 +1,71 @@
 1. На локальном репозитории сделать ветки для:
-- Postman --- git branch Postman
-- Jmeter ---  git branch Jmeter
-- CheckLists ---  git branch Check_Lists
-- Bug Reports --- git branch Bug_Reports
-- SQL --- git branch SQL
-- Charles --- git branch Charles
-- Mobile testing --- git branch Mobile_Testing
+	Postman --- git branch Postman
+	Jmeter ---  git branch Jmeter
+	CheckLists ---  git branch Check_Lists
+	Bug Reports --- git branch Bug_Reports
+	SQL --- git branch SQL
+	Charles --- git branch Charles	
+	Mobile testing --- git branch Mobile_Testing
 
 2. Запушить все ветки на внешний репозиторий
-git push -u origin Postman
-git push -u origin Jmeter
-git push -u origin Check_Lists
-git push -u origin Bug_Reports
-git push -u origin SQL
-git push -u origin Charles
-git push -u origin Mobile_Testing
+	git push -u origin Postman
+	git push -u origin Jmeter
+	git push -u origin Check_Lists
+	git push -u origin Bug_Reports
+	git push -u origin SQL
+	git push -u origin Charles
+	git push -u origin Mobile_Testing
 
 3. В ветке Bug_Reports сделать текстовый документ со структурой баг репорта
-git checkout Bug_Reports
-cat > Bug_Reports
-	ID
-	Heading
-	Summary
-	Step-by-step procedure to find the bug
-	Environment
-	Expected results vs Actual results
-	Priority and severity
-	Additional info
+	git checkout Bug_Reports
+	cat > bug_reports.txt
+		ID
+		Heading
+		Summary
+		Step-by-step procedure to find the bug
+		Environment
+		Expected results vs Actual results
+		Priority and severity
+		Additional info
 
 4. Запушить структуру багрепорта на внешний репозиторий
-git push -u origin Bug_Reports
+	git add bug_reports.txt
+	git commit -m "names1"
+	git push
 
 5. Вмержить ветку Bug_Reports в Main
-git checkout main
-git merge Bug_Reports
+	git checkout main
+	git merge Bug_Reports
 
 6. Запушить main на внешний репозиторий.
-git push -u origin main
+	git push
 
 7. В ветке Check_Lists набросать структуру чек листа.
-git checkout Check_Lists
-cat > check_list.txt
-git add .
-git commit -m "new txt2"
+	git checkout Check_Lists
+	cat > check_list.txt
+		ID
+		Heading
+		Summary
+		Step-by-step procedure to find the bug
+		Environment
+		Expected results vs Actual results
+		Priority and severity
+		Additional info
 
 8. Запушить структуру на внешний репозиторий (находясь в ветке Check_Lists)
-git push -u origin Check_Lists
+	git add check_list.txt
+	git commit -m "names2"
+	git push
 
 9. На внешнем репозитории сделать Pull Request ветки Check_Lists в main
-Кликнуть на Pull requests > New pull requests > Выбрать ветку Check_Lists
+	открыть на GitHub удалённый репозиторий
+	выбрать ветку Checklists
+	кликнуть [Compare & pull request]
+	кликнуть [Create pull request]
+	кликнуть [Merge pull request]
+	кликнуть [Confirm merge]
 
 10. Синхронизировать Внешнюю и Локальную ветки Main
-Cперва проверить реквест с веба, затем: (спросить на проверке)
-git checkout main
-git fetch
-git pull
+	Cперва проверить реквест с веба, затем:
+	git checkout main
+	git pull
